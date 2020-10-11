@@ -1,6 +1,10 @@
+<h2>Listのテンプレート</h2>
 {% for item in object_list %}
-    {{ item.title }}
-    {{ item.content }}
-    {{ item.postdate }}
-    {{ item.category }}
+    <ul>
+        <li>{{ item.title }}</li>
+        <li>{{ item.content }}</li>
+        <li>{{ item.postdate }}</li>
+        <li>{{ item.category }}</li>
+    </ul>
 {% endfor %}
+
