@@ -14,3 +14,6 @@ class BlogModel(models.Model):
         max_length = 50,
         choices = CATEGORY
     )
+    #タイトル表示を入力した文字列にするためのコード
+    def __str__(self):
+        return self.title
