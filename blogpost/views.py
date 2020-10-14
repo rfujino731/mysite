@@ -3,6 +3,8 @@ from django.views.generic import ListView, DetailView, CreateView
 
 from .models import BlogModel
 
+from django.urls import reverse_lazy
+
 class BlogList(ListView):
     template_name = 'blogpost/list.html'
     model = BlogModel
@@ -15,5 +17,4 @@ class BlogCreate(CreateView):
     template_name = 'blogpost/create.html'
     model = BlogModel
     fields = ('title', 'content', 'category')
-
-# Create your views here.
+    success_url = reverse_lazy('list')
