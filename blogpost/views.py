@@ -20,12 +20,12 @@ class BlogCreate(CreateView):
     success_url = reverse_lazy('list')
 
 class BlogDelete(DeleteView):
-    template_name = 'delete.html'
+    template_name = 'blogpost/delete.html'
     model = BlogModel
     success_url = reverse_lazy('list')
 
 class BlogUpdate(UpdateView):
-    template_name = 'update.html'
+    template_name = 'blogpost/update.html'
     model = BlogModel
     fields = ('title', 'content', 'category')
     success_url = reverse_lazy('list')

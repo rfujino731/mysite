@@ -10,7 +10,9 @@
             <div class='card-body'>
                 <h5 class='card-title'>{{ object.title }}</h5>
                 <p class='card-text'>{{ object.content }}</p>
-                <a href="#" class="btn btn-primary">ボタン</a>
+                <a href="{% url 'list' %}" class="btn btn-primary">一覧</a>
+                <a href="{% url 'update' object.pk %}" class="btn btn-primary">編集する</a>
+                <a href="{% url 'delete' object.pk %}" class="btn btn-primary">削除する</a>
             </div>
         </div>
     </div>
