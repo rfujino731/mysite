@@ -1,3 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
-# Create your views here.
+def signupview(request):
+    return render(request, 'signup.html', {'somedate':100})
